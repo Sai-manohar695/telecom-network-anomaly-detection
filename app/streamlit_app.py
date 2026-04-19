@@ -14,7 +14,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
 def load_models():
     scaler = joblib.load(os.path.join(os.path.dirname(__file__), '..', 'models', 'scaler.pkl'))
     iso_forest = joblib.load(os.path.join(os.path.dirname(__file__), '..', 'models', 'isolation_forest.pkl'))
-    autoencoder = keras.models.load_model(os.path.join(os.path.dirname(__file__), '..', 'models', 'autoencoder.keras'))
+    autoencoder = joblib.load(os.path.join(os.path.dirname(__file__), '..', 'models', 'autoencoder.pkl'))
     ae_threshold = np.load(os.path.join(os.path.dirname(__file__), '..', 'models', 'ae_threshold.npy'))
     return scaler, iso_forest, autoencoder, ae_threshold
 
