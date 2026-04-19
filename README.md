@@ -139,6 +139,3 @@ streamlit run streamlit_app.py
 
 ---
 
-## Who This Is For
-
-Portfolio project targeting DS and MLE roles at **Nokia, Ericsson, Huawei, and Jio**. The root cause attribution is what makes it relevant to actual NOC workflows — not just a model benchmark you'd never deploy.
