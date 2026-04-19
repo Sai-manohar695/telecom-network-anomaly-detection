@@ -57,7 +57,7 @@ X_scaled = scaler.transform(X)
 
 # Run predictions
 preds_if = (iso_forest.predict(X_scaled) == -1).astype(int)
-X_reconstructed = autoencoder.predict(X_scaled, verbose=0)
+X_reconstructed = autoencoder.predict(X_scaled)
 reconstruction_errors = np.mean(np.power(X_scaled - X_reconstructed, 2), axis=1)
 preds_ae = (reconstruction_errors > ae_threshold).astype(int)
 
